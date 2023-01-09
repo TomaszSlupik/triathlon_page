@@ -1,0 +1,44 @@
+$body: #7c5fe9;
+$second: #fff;
+
+.header {
+    text-align: center;
+    margin: 1em 0em;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: $body;
+    font-weight: 700;
+
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: $body;
+}
+
+span {
+    color: $second;
+}
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
