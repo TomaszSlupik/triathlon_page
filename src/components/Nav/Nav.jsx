@@ -8,6 +8,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import './Nav.scss'
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
   const [state, setState] = React.useState({
@@ -20,7 +21,7 @@ export default function Nav() {
   const linkNav = [
     {
       nameLink:'Home',
-      hrefLink: '/christmas_app'
+      hrefLink: '/'
     },
     {
       nameLink:'O mnie',
@@ -28,7 +29,7 @@ export default function Nav() {
     },
     {
         nameLink:'Wyjazdy',
-        hrefLink: '/christmas_app/presents'
+        hrefLink: '/trips'
     },
     {
     nameLink:'Osiągnięcia',
@@ -41,8 +42,8 @@ export default function Nav() {
   ]
 
   const style ={
-    burger: {cursor: 'pointer', fontSize: '5rem', color: '#7c5fe9', position: 'fixed', right: '2%', zIndex: 10}, 
-    link: {textDecoration: 'none', color: '#7c5fe9'}
+    burger: {cursor: 'pointer', fontSize: '5rem', color: '#7c5fe9', position: 'fixed', right: '2%', zIndex: 30}, 
+    link: {textDecoration: 'none', color: '#7c5fe9', textAlign: 'center'}
   }
 
   
@@ -65,14 +66,14 @@ export default function Nav() {
       <List>
         {linkNav.map((text, index) => (
           <ListItem key={index} disablePadding>
-            {/* <Link to={text.hrefLink} style={style.link}> */}
+            <Link to={text.hrefLink} style={style.link}>
             <ListItemButton>
               <ListItemIcon style={style.burger}>
                 
               </ListItemIcon>
               <ListItemText primary={text.nameLink} />
             </ListItemButton>
-            {/* </Link> */}
+            </Link>
           </ListItem>
         ))}
       </List>

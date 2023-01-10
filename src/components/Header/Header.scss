@@ -4,6 +4,9 @@ $second: #fff;
 .header {
     text-align: center;
     margin: 1em 0em;
+    &__span {
+        color: $second;
+    }
 }
 
 h1 {
@@ -18,9 +21,7 @@ h2 {
     color: $body;
 }
 
-span {
-    color: $second;
-}
+
 
 @media (min-width: 576px) {
     h1 {

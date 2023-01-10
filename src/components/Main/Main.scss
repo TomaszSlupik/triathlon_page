@@ -3,13 +3,13 @@ $body: #7c5fe9;
 .main {
     position: relative;
     width: 100vw;
-    height: 1200px;
+    height: 100%;
     &__navigation {
         position: fixed;
         width: 100vw;
         height: 70px;
         background-color: #fff;
-        z-index: 1;
+        z-index: 20;
     }
     &__navigationblock {
         position: relative;
@@ -30,6 +30,16 @@ $body: #7c5fe9;
             height: 200px;
             z-index: -10;
             animation: rotate-right 55s infinite linear;
+        }
+        &-svgSquareWhite {
+            display: none;
+            position: absolute;
+            bottom: -21%;
+            left: 5%;;
+            width: 200px;
+            height: 200px;
+            z-index: -10;
+            animation: rotate-left 55s infinite linear;
         }
         &-img {
             width: 50%;
@@ -58,4 +68,58 @@ $body: #7c5fe9;
 	to {
 		transform: rotate(360deg);
 	}
+}
+
+
+@keyframes rotate-left {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+
+@media (min-width: 576px) {
+    
+.main {
+    &__welcome {
+        &-text {
+            font-size: 2rem;
+        }
+        &-svgSquareWhite {
+            display: block;
+        }
+    }
+}   
+}
+
+@media (min-width: 992px) {
+    
+    .main {
+        &__welcome {
+            &-text {
+                font-size: 2.5rem;
+            }
+            &-svgSquareWhite {
+                display: block;
+            }
+        }
+    }   
+    }
+
+@media (min-width: 1400px) {
+    .main {
+        &__welcome {
+            &-svgSquareWhite {
+                width: 300px;
+                height: 300px;
+            }
+            &-svgSquare {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }   
 }
