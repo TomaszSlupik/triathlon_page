@@ -6,6 +6,7 @@ import {useScrollTrigger, Zoom} from '@mui/material';
 import Header from '../Header/Header';
 import Waveanimation from '../Waveanimation/Waveanimation';
 import Avatarme from '../Avatar/Avatarme';
+import Carousel from '../Carousel/Carousel';
 
 
 
@@ -54,6 +55,7 @@ export default function Main() {
                 <div className="main__navigationblock"></div>
                 <Waveanimation />
                 <Avatarme />
+                <Carousel />
             </div>
             <ScrollToTop />
             </>

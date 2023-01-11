@@ -1,4 +1,6 @@
 $body: #7c5fe9;
+$text: #999;
+$nav: #fff;
 
 .main {
     position: relative;
@@ -8,7 +10,7 @@ $body: #7c5fe9;
         position: fixed;
         width: 100vw;
         height: 70px;
-        background-color: #fff;
+        background-color: $nav;
         z-index: 20;
     }
     &__navigationblock {
@@ -56,6 +58,7 @@ $body: #7c5fe9;
             font-size: 1.3rem;
             text-align: justify;
             z-index: 10;
+            color: $text;
         }
     }
 }

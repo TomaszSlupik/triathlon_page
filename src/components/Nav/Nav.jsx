@@ -25,7 +25,7 @@ export default function Nav() {
     },
     {
       nameLink:'O mnie',
-      hrefLink: '/christmas_app/presents'
+      hrefLink: '/aboutme'
     },
     {
         nameLink:'Wyjazdy',

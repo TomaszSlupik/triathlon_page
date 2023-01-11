@@ -4,13 +4,16 @@ import Main from './components/Main/Main';
 import Nav from './components/Nav/Nav';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Trips from './components/Trips/Trips';
+// eslint-disable-next-line
+import "swiper/css/bundle";
+
 
 
 function App() {
   return (
     <div className="App">
       <Router>
-          <Nav />
+          <Nav />   
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/trips' element={<Trips />} />
