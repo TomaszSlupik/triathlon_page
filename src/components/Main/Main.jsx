@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import Waveanimation from '../Waveanimation/Waveanimation';
 import Avatarme from '../Avatar/Avatarme';
 import Carousel from '../Carousel/Carousel';
+import Measuretime from '../Measuretime/Measuretime';
 
 
 
@@ -45,14 +46,15 @@ export default function Main() {
                 <div className="main__navigationblock"></div>
                 <Header />
                 <div className="main__welcome">
-                    <img className="main__welcome-svgSquare" src={process.env.PUBLIC_URL + '/svg/square.svg'} />
-                    <img className="main__welcome-svgSquareWhite" src={process.env.PUBLIC_URL + '/svg/square_white.svg'} />
+                    <img className="main__welcome-svgSquare" src={process.env.PUBLIC_URL + '/svg/square.svg'} alt=""/>
+                    <img className="main__welcome-svgSquareWhite" src={process.env.PUBLIC_URL + '/svg/square_white.svg'} alt="" />
                     <div className="main__welcome-img"></div>
                     <div className="main__welcome-text">  
                     Na codzień pracuje jako Programista. Sport trenuje amatorsko i traktuje to jako moje hobby. Pokazuje jak można łączyć pasję z codziennymi obowiązkami. Zapraszam do śledzenia mojej przygody.     
                     </div>
                 </div>
                 <div className="main__navigationblock"></div>
+                <Measuretime />
                 <Waveanimation />
                 <Avatarme />
                 <Carousel />
