@@ -8,6 +8,7 @@ import Waveanimation from '../Waveanimation/Waveanimation';
 import Avatarme from '../Avatar/Avatarme';
 import Carousel from '../Carousel/Carousel';
 import Measuretime from '../Measuretime/Measuretime';
+import Bloob from '../Bloob/Bloob';
 
 
 
@@ -57,6 +58,7 @@ export default function Main() {
                 <Measuretime />
                 <Waveanimation />
                 <Avatarme />
+                <Bloob />
                 <Carousel />
             </div>
             <ScrollToTop />

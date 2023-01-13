@@ -21,19 +21,10 @@ export default function Carousel() {
       
         <div className="carousel__box-slide">
             <SwiperSlide>
-              <img className='carousel__box-slide' src={process.env.PUBLIC_URL + '/img/carouselone.jpeg'} />
+              <img className='carousel__box-slide' src={process.env.PUBLIC_URL + '/img/carouselone.jpeg'} alt="zawody indoor triathlon - pływanie"/>
             </SwiperSlide>
             <SwiperSlide>
-              <img className='carousel__box-slide' src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className='carousel__box-slide' src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className='carousel__box-slide' src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className='carousel__box-slide' src="https://swiperjs.com/demos/images/nature-5.jpg" />
+              <img className='carousel__box-slide' src={process.env.PUBLIC_URL + '/img/carouseltwo.JPG'} alt="susz triathlon"/>
             </SwiperSlide>
         </div>
         </Swiper>
