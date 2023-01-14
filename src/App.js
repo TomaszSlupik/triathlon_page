@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Trips from './components/Trips/Trips';
 // eslint-disable-next-line
 import "swiper/css/bundle";
+import Results from './components/Results/Results';
 
 
 
@@ -16,6 +17,7 @@ function App() {
           <Nav />   
         <Routes>
           <Route path='/' element={<Main />} />
+          <Route path='/results' element={<Results />} />
           <Route path='/trips' element={<Trips />} />
         </Routes>
         <Footer />

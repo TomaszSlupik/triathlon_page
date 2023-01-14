@@ -24,21 +24,14 @@ export default function Nav() {
       hrefLink: '/'
     },
     {
-      nameLink:'O mnie',
-      hrefLink: '/aboutme'
-    },
+      nameLink:'Wyniki',
+      hrefLink: '/results'
+  },
     {
         nameLink:'Wyjazdy',
         hrefLink: '/trips'
     },
-    {
-    nameLink:'Osiągnięcia',
-    hrefLink: '/christmas_app/presents'
-    },
-    {
-        nameLink:'Kontakt',
-        hrefLink: '/christmas_app/presents'
-    },
+
   ]
 
   const style ={

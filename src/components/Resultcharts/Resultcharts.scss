@@ -1,0 +1,54 @@
+
+.charts {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        margin-top: 2em;
+        width: 100%;
+        height: 500px;
+        
+    }
+}
+
+.data {
+    position: relative;
+    height: 100%;
+    width: 380px;
+    margin-left: -2em
+}
+
+@media (min-width: 576px) {
+
+    .charts {
+    
+        &__box {
+            width: 80%;
+            
+        }
+    }
+    .data {
+        width: 500px;
+
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .charts {
+    
+        &__box {
+            width: 80%;
+            height: 600px;
+            
+        }
+    }
+    .data {
+        width: 900px;
+
+    }
+}

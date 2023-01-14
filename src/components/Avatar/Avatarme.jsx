@@ -1,12 +1,10 @@
 import React from 'react'
 import Avatar from '@mui/material/Avatar';
 import './Avatarme.scss'
-import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import ShareIcon from '@mui/icons-material/Share';
 import FlightIcon from '@mui/icons-material/Flight';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Person3Icon from '@mui/icons-material/Person3';
@@ -20,10 +18,10 @@ const style = {
 }
 
 const actions = [
-  { icon: <LocalPhoneIcon />, name: 'Kontakt' },
-  { icon: <EmojiEventsIcon />, name: 'Osiągnięcia' },
-  { icon: <FlightIcon />, name: 'Wyjazdy' },
-  { icon: <Person3Icon />, name: 'O mnie' },
+  { icon: <LocalPhoneIcon />, name: 'Kontakt - jeżeli masz pytania, napisz ' },
+  { icon: <EmojiEventsIcon />, name: 'Osiągnięcia - krótki opis moich wyników' },
+  { icon: <FlightIcon />, name: 'Wyjazdy - na stronie opisuje aktualne wyjazdy oraz relacje z nich.' },
+  { icon: <Person3Icon />, name: 'O mnie - specjalizuję się w treningu od 3 roku życia' },
 ];
 
   return (
@@ -49,7 +47,7 @@ const actions = [
         </div>
         </div>
        
-          <img className="avatar__img" src={process.env.PUBLIC_URL + '/img/avatarbike.jpg'} />
+          <img className="avatar__img" src={process.env.PUBLIC_URL + '/img/avatarbike.jpg'} alt="Zawody duathlonowe - etap kolarski"/>
     </div>
   )
 }
