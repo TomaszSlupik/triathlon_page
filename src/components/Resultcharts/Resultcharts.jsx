@@ -76,11 +76,23 @@ export default function Resultcharts() {
     };
   
 
-    const data = {
+    const data2022 = {
         labels: ['HP Indoor Triathlon', 'Duathlon Czempiń', 'Mistrzostwa Europy Olsztyn', 'Susz Triathlon', 'Enea Bydgoszcz Triathlon', 'Sprint Triathlon Gdynia', 'Dziesiątka Babicka', '5150 Poznań', 'Mararton Warszawski - kat M20'], 
         datasets: [
             {
                 data: [1, 1, 4, 3, 1, 3, 1, 1, 3], 
+                borderColor: '#7c5fe9', 
+                tension: 0.5, 
+            
+            }
+        ]
+    }
+
+        const data2023 = {
+        labels: ['HP Indoor Triathlon',], 
+        datasets: [
+            {
+                data: [1,], 
                 borderColor: '#7c5fe9', 
                 tension: 0.5, 
             
@@ -123,23 +135,26 @@ export default function Resultcharts() {
           aria-label="full width tabs example"
         >
           <Tab label="2021 r." {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="2022 r." {...a11yProps(1)} />
+          <Tab label="2023 r." {...a11yProps(2)} />
+         
         </Tabs>
       </AppBar>
       <Button
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction} style={style.panel}>
-                <div className="data">
-                    <Line data={data} style={style.data} options={options}></Line>
-                </div>
+
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
+                <div className="data">
+                    <Line data={data2022} style={style.data} options={options}></Line>
+                </div>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+                <div className="data">
+                    <Line data={data2023} style={style.data} options={options}></Line>
+                </div>
         </TabPanel>
       </Button>
     </Box>

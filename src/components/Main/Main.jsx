@@ -9,6 +9,7 @@ import Avatarme from '../Avatar/Avatarme';
 import Carousel from '../Carousel/Carousel';
 import Measuretime from '../Measuretime/Measuretime';
 import Bloob from '../Bloob/Bloob';
+import HeaderImage from '../HeaderImage/HeaderImage';
 
 
 
@@ -46,6 +47,7 @@ export default function Main() {
                 </Zoom>
                 <div className="main__navigationblock"></div>
                 <Header />
+                <HeaderImage />
                 <div className="main__welcome">
                     <img className="main__welcome-svgSquare" src={process.env.PUBLIC_URL + '/svg/square.svg'} alt=""/>
                     <img className="main__welcome-svgSquareWhite" src={process.env.PUBLIC_URL + '/svg/square_white.svg'} alt="" />

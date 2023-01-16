@@ -89,7 +89,7 @@ $nav: #fff;
 .main {
     &__welcome {
         &-text {
-            font-size: 2rem;
+            font-size: 1.6rem;
         }
         &-svgSquareWhite {
             display: block;
@@ -98,12 +98,13 @@ $nav: #fff;
 }   
 }
 
-@media (min-width: 992px) {
+
+@media (min-width: 768px) {
     
     .main {
         &__welcome {
             &-text {
-                font-size: 2.5rem;
+                font-size: 1.9rem;
             }
             &-svgSquareWhite {
                 display: block;
@@ -111,6 +112,21 @@ $nav: #fff;
         }
     }   
     }
+
+
+    @media (min-width: 1200px) {
+    
+        .main {
+            &__welcome {
+                &-text {
+                    font-size: 2.5rem;
+                }
+            }
+        }   
+        }
+    
+    
+
 
 @media (min-width: 1400px) {
     .main {
