@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import './Footer.scss'
 
-export default function () {
+export default function Footer () {
 
     const yearNow = () => {
         let year = footeryear.current
