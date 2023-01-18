@@ -11,6 +11,7 @@ import Measuretime from '../Measuretime/Measuretime';
 import Bloob from '../Bloob/Bloob';
 import HeaderImage from '../HeaderImage/HeaderImage';
 import Map from '../Map/Map';
+import Moreinfo from '../Moreinfo/Moreinfo';
 
 
 
@@ -63,6 +64,7 @@ export default function Main() {
                 <Avatarme />
                 <Bloob />
                 <Map />
+                <Moreinfo />
                 <Carousel />
             </div>
             <ScrollToTop />

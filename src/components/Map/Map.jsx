@@ -36,7 +36,7 @@ const [open, setOpen] = useState(false)
 
 const style = {
   icon: {color: '#7c5fe9', fontSize: '4rem'}, 
-  info: {color: '#7c5fe9', position: 'absolute', right: '51%', top: '2%', fontSize: '2rem', cursor: 'crosshair'},
+  info: {color: '#7c5fe9', position: 'absolute', right: '51%', top: '2%', fontSize: '2.5rem', cursor: 'crosshair'},
   write: {color: '#7c5fe9', fontSize: '4rem', cursor: 'pointer'}
 }
 
