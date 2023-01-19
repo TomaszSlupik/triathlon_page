@@ -24,7 +24,7 @@ export default function Introduction()   {
   return  (
     <div className='introduction'>
         
-      <div className="introduction__img">
+      <div className="introduction__img kenburns-top">
         <div className="introduction__img-shadow"></div>
       <CircularProgress
         style={style.circle}

@@ -1,0 +1,110 @@
+$nav: #fff;
+$body: #7c5fe9;
+$text: #999;
+
+.aboutme {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    &__header {
+        font-family: 'Black Ops One', sans-serif;
+        text-align: center;
+        color: $body;
+        font-size: 2rem;
+        text-shadow: 2px 2px 3px rgba(15, 15, 15, 0.54);   
+    }
+    &__line {
+        height: 4px;
+        width: 100px;
+        background-color: $body;
+        border-radius: 8px;
+    }
+    &__wrapper {
+        position: relative;
+        margin-top: 1em;
+        height: 100%;
+        width: 100vw;
+        background-color: $nav;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1em;
+        &-box {
+            position: relative;
+            width: 90%;
+            height: 400px;
+            background: linear-gradient(45deg, rgba(0,0,0,0.75), rgba(0,0,0,0.25));
+            border-radius: 8px;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 576px) {
+    .aboutme {
+            &__header {
+                font-size: 2.5rem;
+            }
+            &__line {
+                width: 125px;
+            }
+        }
+}
+
+@media only screen and (min-width: 768px) {
+    .aboutme {
+            &__header {
+                font-size: 3.5rem;
+            }
+            &__line {
+                width: 195px;
+            }
+        }
+}
+
+@media only screen and (min-width: 992px) {
+    .aboutme {
+            &__header {
+                font-size: 4rem;
+            }
+            &__line {
+                width: 210px;
+            }
+        }
+}
+
+@media only screen and (min-width: 1200px) {
+    .aboutme {
+            &__header {
+                font-size: 4.5rem;
+            }
+            &__line {
+                width: 240px;
+            }
+        }
+}
+
+@media only screen and (min-width: 1400px) {
+    .aboutme {
+            &__header {
+                font-size: 5rem;
+            }
+            &__line {
+                width: 280px;
+            }
+        }
+}
+

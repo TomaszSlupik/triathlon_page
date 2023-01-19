@@ -12,6 +12,8 @@ import Bloob from '../Bloob/Bloob';
 import HeaderImage from '../HeaderImage/HeaderImage';
 import Map from '../Map/Map';
 import Moreinfo from '../Moreinfo/Moreinfo';
+import Contact from '../Contact/Contact';
+import Aboutme from '../Aboutme/Aboutme';
 
 
 
@@ -50,6 +52,7 @@ export default function Main() {
                 <div className="main__navigationblock"></div>
                 <Header />
                 <HeaderImage />
+                <Aboutme />
                 <div className="main__welcome">
                     <img className="main__welcome-svgSquare" src={process.env.PUBLIC_URL + '/svg/square.svg'} alt=""/>
                     <img className="main__welcome-svgSquareWhite" src={process.env.PUBLIC_URL + '/svg/square_white.svg'} alt="" />
@@ -66,6 +69,7 @@ export default function Main() {
                 <Map />
                 <Moreinfo />
                 <Carousel />
+                <Contact />
             </div>
             <ScrollToTop />
             </>

@@ -1,0 +1,99 @@
+.moreinfobtn {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+   &__box {
+    &-img{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: -12%;
+        animation: btnanimation 15s infinite linear;
+        z-index: -1;
+    }
+   }
+}
+
+
+@keyframes btnanimation {
+    0% {
+        left: -12%;
+    }
+
+    50% {
+        left: 60%;
+    }
+
+    100% {
+        left: -12%;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 576px) {
+    .moreinfobtn {
+       &__box {
+        &-img{
+            left: 0%;
+            animation: btnanimationTwo 10s infinite linear;
+        }
+       }
+    }
+    
+}
+
+@keyframes btnanimationTwo {
+    0% {
+        left: -28%;
+    }
+
+    50% {
+        left: 0%;
+    }
+
+    100% {
+        left: -28%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .moreinfobtn {
+       &__box {
+        &-img{
+            left: 0%;
+            animation: btnanimationThree 15s infinite linear;
+        }
+       }
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    .moreinfobtn {
+       &__box {
+        &-img{
+            left: 0%;
+            animation: btnanimationThree 20s infinite linear;
+        }
+       }
+    }
+    
+}
+
+@keyframes btnanimationThree {
+    0% {
+        left: -44%;
+    }
+
+    50% {
+        left: -8%;
+    }
+    100% {
+        left: -44%;
+    }
+
+}

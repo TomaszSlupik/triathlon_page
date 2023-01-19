@@ -1,0 +1,45 @@
+.moreinfoanimation {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    &__me {
+        &-one {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            right: 5%;
+            top: 2%;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 576px) {
+    .moreinfoanimation {
+        &__me {
+            &-one {
+                right: 33%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .moreinfoanimation {
+        &__me {
+            &-one {
+                right: 0%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .moreinfoanimation {
+        &__me {
+            &-one {
+                right: 7%;
+            }
+        }
+    }
+}

@@ -4,6 +4,8 @@ import Mybutton from '../../style/mystyle'
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import FlightIcon from '@mui/icons-material/Flight';
 import { useNavigate } from 'react-router-dom';
+import Moreinfoanimation from '../Moreinfoanimation/Moreinfoanimation';
+import Moreinfobtn from '../Moreinfobtn/Moreinfobtn';
 
 
 
@@ -26,11 +28,12 @@ export default function Moreinfo() {
   return (
     <div>
         <div className="moreinfo">
+          <Moreinfoanimation />
             <div className="moreinfo__text">
                 Więcej  <br /> informacji znajdziesz
             </div>
                 <div className="moreinfo__wrapper">
-
+                
                 <div className="moreinfo__result">
                   <div className="moreinfo__result-middlebox"></div> 
                   <div className="moreinfo__result-circle">
@@ -58,10 +61,11 @@ export default function Moreinfo() {
                       <div className="moreinfo__trip-circle--btn flightIconRight">
                           <Mybutton onClick={goToTrip}>zobacz</Mybutton>
                       </div>
-                  </div>
+                      <Moreinfobtn />
+                  </div>   
                 </div> 
-
-                </div>
+                
+                </div> 
         </div>
     </div>
   )
