@@ -1,4 +1,5 @@
 import React from 'react'
+import Form from '../Form/Form'
 import './Contact.scss'
 
 export default function Contact() {
@@ -11,6 +12,7 @@ export default function Contact() {
                 <div className="contact__img-shadow">
             </div>
             </div> 
+            <Form />
         </div>
     </div>
   )
