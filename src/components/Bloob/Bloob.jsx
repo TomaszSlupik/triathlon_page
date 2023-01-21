@@ -6,12 +6,11 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import MyTimeline from '../../style/mymuistyle/mytimeline';
+import theme from '../../style/mybreakpoints';
+import { ThemeProvider } from '@mui/material';
 
 export default function Bloob() {
-
-  const style = {
-    timeline: {color: '#7c5fe9'}
-  }
 
   return (
     <div className='bloob'>
@@ -23,27 +22,51 @@ export default function Bloob() {
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent style={style.timeline}>4 miejsce Mistrzostwa Europy AG w Triathlonie</TimelineContent>
+            <TimelineContent>
+                <ThemeProvider theme={theme}>
+                <MyTimeline>
+                  4 miejsce Mistrzostwa Europy AG w Triathlonie
+                  </MyTimeline>
+                </ThemeProvider>
+              </TimelineContent>
           </TimelineItem>
           <TimelineItem>
             <TimelineSeparator>
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent style={style.timeline}>Multimedalista Mistrzostw Polski w Duathlonie</TimelineContent>
+            <TimelineContent>
+            <ThemeProvider theme={theme}>
+                <MyTimeline>
+                  Multimedalista Mistrzostw Polski w Duathlonie
+                </MyTimeline>
+            </ThemeProvider>
+            </TimelineContent>
           </TimelineItem>
           <TimelineItem>
             <TimelineSeparator>
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent style={style.timeline}>Mistrz Polski AG w Aquathlonie</TimelineContent>
+            <TimelineContent>
+            <ThemeProvider theme={theme}>
+                <MyTimeline>
+                 Mistrz Polski AG w Aquathlonie
+                </MyTimeline>
+            </ThemeProvider>
+            </TimelineContent>
           </TimelineItem>
           <TimelineItem>
             <TimelineSeparator>
               <TimelineDot />
             </TimelineSeparator>
-            <TimelineContent style={style.timeline}>Kwalifikacja na Mistrzostwa Świata w St. George w Utah</TimelineContent>
+            <TimelineContent>
+            <ThemeProvider theme={theme}>
+                <MyTimeline>
+                 Kwalifikacja na Mistrzostwa Świata w St. George w Utah
+                </MyTimeline>
+            </ThemeProvider>
+            </TimelineContent>
           </TimelineItem>
         </Timeline>
         </div>

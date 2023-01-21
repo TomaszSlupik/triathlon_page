@@ -30,7 +30,7 @@ export default function Moreinfo() {
         <div className="moreinfo">
           <Moreinfoanimation />
             <div className="moreinfo__text">
-                Więcej  <br /> informacji znajdziesz
+                Więcej informacji znajdziesz
             </div>
                 <div className="moreinfo__wrapper">
                 

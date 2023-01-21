@@ -3,7 +3,7 @@ import {useScrollTrigger, Zoom, Fab} from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const styles = {
-    div: {position: 'fixed', bottom: 20, right: 20}, 
+    div: {position: 'fixed', bottom: 20, right: 20, zIndex: 20}, 
    
 }
 

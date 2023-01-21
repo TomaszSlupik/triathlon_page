@@ -9,6 +9,9 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import './Nav.scss'
 import { Link } from 'react-router-dom';
+import { styled } from '@mui/system';
+import { useState, useEffect } from 'react';
+
 
 export default function Nav() {
   const [state, setState] = React.useState({
@@ -39,6 +42,32 @@ export default function Nav() {
     link: {textDecoration: 'none', color: '#7c5fe9', textAlign: 'center'}
   }
 
+  const Responsive = styled('span')(({theme}) => ({
+    [theme.breakpoints.up('xs')] : {
+      fontSize: '1.5rem', 
+      margin: '0.5em'
+    },
+    [theme.breakpoints.up('sm')] : {
+      fontSize: '2rem', 
+    },
+    [theme.breakpoints.up('md')] : {
+      fontSize: '3rem', 
+    }
+  }))
+
+  const [w, setW] = useState(window.innerWidth)
+  useEffect(()=> {
+    const handleReasize = () => {
+      
+      setW(window.innerWidth)
+    }
+    window.addEventListener("resize", handleReasize)
+    return () => {
+      window.removeEventListener("resize", handleReasize)
+    }
+  }, [])
+
+ 
   
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -50,7 +79,7 @@ export default function Nav() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250}}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -59,14 +88,16 @@ export default function Nav() {
       <List>
         {linkNav.map((text, index) => (
           <ListItem key={index} disablePadding>
-            <Link to={text.hrefLink} style={style.link}>
-            <ListItemButton>
+            <Responsive>
+            <Link to={text.hrefLink}  style={style.link}>{text.nameLink}
+            {/* <ListItemButton>
               <ListItemIcon style={style.burger}>
                 
               </ListItemIcon>
-              <ListItemText primary={text.nameLink} />
-            </ListItemButton>
+              <ListItemText />
+            </ListItemButton> */}
             </Link>
+            </Responsive>
           </ListItem>
         ))}
       </List>

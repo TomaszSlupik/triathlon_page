@@ -2,12 +2,16 @@ import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFlip, Pagination, Navigation } from "swiper";
 import './Carousel.scss'
+import TextDescribe  from '../../style/mymuistyle/textdescribe'
+import { ThemeProvider } from '@mui/system';
+import theme from '../../style/mybreakpoints'
 
 export default function Carousel() {
 
   return (
     <div>
         <div className="carousel">
+          <img src={process.env.PUBLIC_URL + '/svg/x.svg'} alt="" className="carousel__x" />
           <div className="carousel__box">
             
           <Swiper
@@ -31,10 +35,14 @@ export default function Carousel() {
           </div>
 
           <div className="carousel__text">
+          <ThemeProvider theme={theme}>
+              <TextDescribe>
             <div>🔵Triathlon</div>
             <div>🔹1st🥇Duathlon AG Polish Championship</div>
             <div>🔹1st🥇 Aquathlon AG Polish Championship</div>
             <div>🔹4th 🇵🇱Triathlon AG European Championship </div>
+            </TextDescribe>
+          </ThemeProvider>
           </div>
         </div>
     </div>

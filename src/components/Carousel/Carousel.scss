@@ -1,4 +1,5 @@
 $text: #999;
+@import '../../animations/animations';
 
 .carousel {
     position: relative;
@@ -9,7 +10,16 @@ $text: #999;
     justify-content: space-around;
     align-items: center;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 2em; 
+    &__x {
+        position: absolute;
+        right: 4%;
+        bottom: 67%;
+        width: 200px;
+        height: 200px;
+        animation: rotate-left 55s infinite linear;
+        display: none;
+    }
     &__box {
         position: relative;
         width: 50%;
@@ -22,44 +32,40 @@ $text: #999;
         }
     }
     &__text {
-        font-size: 1.3rem;
-        color: $text;
         padding: 0.2em 0.5em;
-        text-align: justify;
     }
 }
 
 
-@media (min-width: 576px) {
+@media only screen and  (min-width: 576px) {
     
     .carousel {
         &__text {
                 width: 50%;
-                font-size: 1.6rem;
         }
 }   
 }
 
-
-@media (min-width: 1200px) {
-    
+@media only screen and (min-width: 1200px) {
     .carousel {
-        &__text {
-               
-                font-size: 1.8rem;
+        height: 450px;
+        &__x {
+            display: block;
         }
-}   
+        &__box {
+            &-slide {
+                height: 450px
+     }}}
 }
 
-
-@media (min-width: 1400px) {
-    
+@media only screen and (min-width: 1400px) {
     .carousel {
-        &__text {
-                font-size: 2.25rem;
-        }
-}   
+        &__x {
+            width: 300px;
+            height: 300px;
+        }}
 }
+
 
 
 .swiper {

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Introduction from '../Introduction/Introduction'
 import ScrollToTop from '../ScrolltoTop/ScrolltoTop'
 import './Main.scss'
@@ -14,7 +14,9 @@ import Map from '../Map/Map';
 import Moreinfo from '../Moreinfo/Moreinfo';
 import Contact from '../Contact/Contact';
 import Aboutme from '../Aboutme/Aboutme';
-
+import TextDescribe from '../../style/mymuistyle/textdescribe'
+import theme from '../../style/mybreakpoints'
+import { ThemeProvider } from '@mui/material';
 
 
 export default function Main() {
@@ -32,6 +34,19 @@ export default function Main() {
         disableHysteresis: true,
         threshold: 10,
       });
+
+const [testw, setTextW] = useState(window.innerWidth)
+useEffect(()=> {
+  const handleReasize = () => {
+    
+    setTextW(window.innerWidth)
+  }
+  window.addEventListener("resize", handleReasize)
+  return () => {
+    window.removeEventListener("resize", handleReasize)
+  }
+}, [])
+
 
       
 
@@ -57,8 +72,12 @@ export default function Main() {
                     <img className="main__welcome-svgSquare" src={process.env.PUBLIC_URL + '/svg/square.svg'} alt=""/>
                     <img className="main__welcome-svgSquareWhite" src={process.env.PUBLIC_URL + '/svg/square_white.svg'} alt="" />
                     <div className="main__welcome-img"></div>
-                    <div className="main__welcome-text">  
-                    Na codzień pracuje jako Programista. Sport trenuje amatorsko i traktuje to jako moje hobby. Pokazuje jak można łączyć pasję z codziennymi obowiązkami. Zapraszam do śledzenia mojej przygody.     
+                    <div className="main__welcome-text">
+                    <ThemeProvider theme={theme}>
+                      <TextDescribe>
+                        Na codzień pracuje jako Programista. Sport trenuje amatorsko i traktuje to jako moje hobby. Pokazuje jak można łączyć pasję z codziennymi obowiązkami. Zapraszam do śledzenia mojej przygody.     
+                      </TextDescribe>
+                    </ThemeProvider>  
                     </div>
                 </div>
                 <div className="main__navigationblock"></div>
@@ -69,7 +88,7 @@ export default function Main() {
                 <Map />
                 <Moreinfo />
                 <Carousel />
-                <Contact />
+                <Contact />      
             </div>
             <ScrollToTop />
             </>
