@@ -7,6 +7,7 @@ import Trips from './components/Trips/Trips';
 // eslint-disable-next-line
 import "swiper/css/bundle";
 import Results from './components/Results/Results';
+import Thankyou from './pages/Thankyou';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/' element={<Main />} />
           <Route path='/results' element={<Results />} />
           <Route path='/trips' element={<Trips />} />
+          <Route path='/thankyou' element={<Thankyou />} />
         </Routes>
         <Footer />
       </Router>

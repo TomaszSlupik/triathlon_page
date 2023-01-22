@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import './Form.scss'
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
@@ -51,18 +51,21 @@ const changeText = (e) => {
 }
 
 const style = {
-  paper: {width: '100%', height: '100%', padding: '0.6em 0.3em'}, 
+  paper: {width: '100%', height: '100%', padding: '0.6em 0.3em', backgroundColor: '#999'}, 
   btn: {marginTop: '0.7em'},
-  field: {width: '90%', color: '#7c5fe9'}
+  field: {width: '90%', color: '#999'}
 }
 
   return (
     <div>
       <div className="contactbox">
-              <form action="" className='contactbox__form' onSubmit={submit}>
+              <form action="https://formsubmit.io/send/slupiktomasz@gmail.com" 
+              method='POST'
+              className='contactbox__form' 
+              >
               <div className="contactbox__form-box">
               <Paper elevation={3} style={style.paper}>
-              <label className='label'>Email <AlternateEmailIcon /></label>  
+              <label htmlFor='mail' className='label'>Email <AlternateEmailIcon /></label>  
               <br></br>
               <Collapse in={openemail}>
               <Alert severity="error"
@@ -80,10 +83,13 @@ const style = {
               }
               >{validemail}</Alert>
                </Collapse>
-                    <TextField id="outlined-basic" type="email" 
+                    <TextField id="mail" type="mail" name='mail'
                     value={email}  
                     onChange={changeEmail}
-                    label="wpisz swój adres email" variant="outlined" />
+                    label="wpisz swój adres email" variant="outlined" 
+                    />
+
+
               <br></br>
               <Collapse in={opentext}>
               <Alert severity="error"
@@ -101,16 +107,22 @@ const style = {
               }
               >{validtext}</Alert>
               </Collapse>
-              <label className='label'>Twoja wiadomość <EmailIcon/></label> 
+              <label className='label' htmlFor='msg'>Twoja wiadomość <EmailIcon/></label> 
               <br></br>
-              <TextField id="outlined-basic" type="text" 
+              <TextField id="msg" type="msg" name='msg' 
               style={style.field}
               value={text} 
               onChange={changeText}
               label="wpisz treść wiadomości" 
               variant="outlined" />
               <br></br>
-              <Mybutton style={style.btn} variant="contained" endIcon={<SendIcon />}>
+              <input name="_redirect" 
+              type="hidden" 
+              id="name" 
+              value="http://localhost:3000/thankyou" />
+              <Mybutton 
+              onSubmit={submit}
+              style={style.btn} variant="contained" endIcon={<SendIcon />}>
               Wyślij 
               </Mybutton>     
               </Paper>

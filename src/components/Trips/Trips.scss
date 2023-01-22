@@ -1,0 +1,32 @@
+
+
+.trip {
+    margin-top: 70px;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        position: relative;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-wrapper {
+            display: grid;
+            grid-template-columns: repeat(1/ 1fr);
+        }
+    } 
+}
+
+
+@media only screen and  (min-width: 762px) {
+    
+.trip {
+    &__box {
+        width: 100%;
+    }
+}
+}

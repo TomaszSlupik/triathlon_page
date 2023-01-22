@@ -1,0 +1,50 @@
+ [
+    {
+        "id": 0, 
+        "name": "Maraton Warszawski", 
+        "type": "bieg",
+        "data": "września 25, 2022",
+        "image": "/img/img_2022/bydgoszcz.JPG",
+        "marks" : 5
+    }, 
+    {
+        "id": 1, 
+        "name": "5150",
+        "type": "Triathlon",
+        "data": "września 4, 2022",
+        "image": "/img/img_2022/bydgoszcz.JPG",
+        "marks" : 3.5
+    }, 
+    {
+        "id": 2, 
+        "name": "Dziesiątka babicka",
+        "type": "bieg",
+        "data": "sierpnia 27, 2022",
+        "image": "/img/img_2022/babicka.JPG",
+        "marks" : 4.5
+    }, 
+    {
+        "id": 3, 
+        "name": "Sprint Gdynia",
+        "type": "Triathlon",
+        "data": "sierpnia 6, 2022",
+        "image": "/img/img_2022/sprint.JPG",
+        "marks" : 5
+    },
+    {
+        "id": 4, 
+        "name" : "Enea Bydgoszcz ",
+        "type": "Triathlon",
+        "data": "lipca 10, 2022",
+        "image": "/img/img_2022/bydgoszcz.JPG",
+        "marks" : 4
+    },
+    {
+        "id": 5, 
+        "name" : "ChampionMan",
+        "type": "Duathlon",
+        "data": "maja 7, 2022",
+        "image": "/img/img_2022/champion.jpeg",
+        "marks" : 5
+    }
+]
