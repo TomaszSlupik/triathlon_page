@@ -8,12 +8,16 @@ import { useState} from 'react';
 import { teal, blue, indigo } from '@mui/material/colors';
 import CardHeader from '@mui/material/CardHeader';
 import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './Trips.scss'
 import Mycard from '../../style/mymuistyle/card';
 import CardMedia from '@mui/material/CardMedia';
 import Rating from '@mui/material/Rating';
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
+import Switch from '../../style/myswitch';
+import Textswitch from '../../style/mymuistyle/textswitch';
+
 
 export default function Trips() {
 
@@ -24,10 +28,55 @@ const style = {
   card: {height: '300px'}
 }
 
+let navigate = useNavigate()
+
+const goToPage = (id) => {
+    navigate(`${id}`)
+}
+
+
+const [triathlon, setTriathlon] = useState (false)
+
+
+const triathlonFilter = () => {
+  console.log(triathlon)
+  setTriathlon(true)
+  if (triathlon === false) {
+    filterTrips('Triathlon')
+  }
+  else (
+    filterTripsYes('Triathlon')
+  )
+}
+
+const filterTrips = (type) => {
+      const tripCopy = [...trip]
+      const updateTrips = tripCopy.filter((el) => {
+        return el.type !== type
+      })
+      console.log(trip)
+      setTrip(updateTrips)  
+      setTriathlon(true)
+}
+
+
+const filterTripsYes = () => {
+  setTrip(Data)  
+  setTriathlon(false)
+}
+
 
   return (
     <div>
       <div className="trip">
+        <div className="trip__switch">
+        <ThemeProvider theme={theme}>
+     
+        <Textswitch
+          onClick={() => triathlonFilter('Triathlon')}
+        > Triathlon</Textswitch >
+      </ThemeProvider>
+        </div>
         <div className="trip__box">
                   <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} style={style.grid}>
@@ -61,9 +110,9 @@ const style = {
                                           
                                         }
                                         action={
-                                          <IconButton aria-label="settings">
-                                            <MoreVertIcon />
-                                          </IconButton>
+                                          <Button aria-label="settings">
+                                            <MoreVertIcon onClick={() => goToPage(el.nav)}/>
+                                          </Button>
                                         }
                                         title={el.name}
                                         subheader={el.data}
@@ -75,6 +124,7 @@ const style = {
                                         alt={el.name + 'zdjęcie opisujące zawody'}
                                       />
                                        <Rating name="read-only" value={el.marks} precision={0.5} readOnly />
+                                 
                                   </Card>
                                 </Mycard>
                               </Grid>

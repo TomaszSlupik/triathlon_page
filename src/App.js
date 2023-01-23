@@ -8,6 +8,7 @@ import Trips from './components/Trips/Trips';
 import "swiper/css/bundle";
 import Results from './components/Results/Results';
 import Thankyou from './pages/Thankyou';
+import Maraton from './components/Trips/Describetrips/Maraton/Maraton';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/results' element={<Results />} />
           <Route path='/trips' element={<Trips />} />
           <Route path='/thankyou' element={<Thankyou />} />
+          <Route path='/maraton' element={<Maraton />} />
         </Routes>
         <Footer />
       </Router>

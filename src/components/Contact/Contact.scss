@@ -43,3 +43,10 @@ $nav: #fff;
             height: 600px;
         }
 }}
+
+@media only screen and (min-width: 1400px) {
+    .contact {
+        &__img {
+            height: 1000px;
+        }
+}}
