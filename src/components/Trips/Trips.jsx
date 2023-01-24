@@ -15,9 +15,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import Switch from '../../style/myswitch';
 import Textswitch from '../../style/mymuistyle/textswitch';
-
+import Switchtriathlon from '../../style/mymuistyle/myswitch';
+import Switchduathlon from '../../style/mymuistyle/myswitchtwo';
+import Switchrun from '../../style/mymuistyle/myswitchthree';
 
 export default function Trips() {
 
@@ -36,10 +37,13 @@ const goToPage = (id) => {
 
 
 const [triathlon, setTriathlon] = useState (false)
+const [duathlon, setDuathlon] = useState(false)
+const [run, setRun] = useState(false)
+
 
 
 const triathlonFilter = () => {
-  console.log(triathlon)
+
   setTriathlon(true)
   if (triathlon === false) {
     filterTrips('Triathlon')
@@ -49,20 +53,44 @@ const triathlonFilter = () => {
   )
 }
 
+const duathlonFilter  = () => {
+  setDuathlon(true)
+  if (duathlon === false) {
+    filterTrips('Duathlon')
+  }
+  else (
+    filterTripsYes('Duathlon')
+  )
+}
+
+const runFilter = () => {
+  setRun(true)
+  if (run === false) {
+    filterTrips('Bieg')
+  }
+  else (
+    filterTripsYes('Bieg')
+  )
+}
+
 const filterTrips = (type) => {
       const tripCopy = [...trip]
       const updateTrips = tripCopy.filter((el) => {
-        return el.type !== type
+        return el.type === type
       })
-      console.log(trip)
       setTrip(updateTrips)  
+     
       setTriathlon(true)
+      setDuathlon(true)
+      setRun(true)
 }
 
 
 const filterTripsYes = () => {
   setTrip(Data)  
   setTriathlon(false)
+  setDuathlon(false)
+  setRun(false)
 }
 
 
@@ -71,10 +99,28 @@ const filterTripsYes = () => {
       <div className="trip">
         <div className="trip__switch">
         <ThemeProvider theme={theme}>
-     
+        <Switchtriathlon triathlonFilter={() => triathlonFilter()}
+            filterTrips={() => filterTrips()}
+            filterTripsYes={()=> filterTripsYes()}
+            />
         <Textswitch
-          onClick={() => triathlonFilter('Triathlon')}
         > Triathlon</Textswitch >
+
+        <Switchduathlon duathlonFilter={() => duathlonFilter()}
+            filterTrips={() => filterTrips()}
+            filterTripsYes={()=> filterTripsYes()}
+            disabled
+            />
+        <Textswitch
+        > Duathlon</Textswitch >
+
+        <Switchrun runFilter={() => runFilter()}
+            filterTrips={() => filterTrips()}
+            filterTripsYes={()=> filterTripsYes()}
+            />
+        <Textswitch
+        >Bieganie</Textswitch >
+
       </ThemeProvider>
         </div>
         <div className="trip__box">
@@ -91,7 +137,7 @@ const filterTripsYes = () => {
                                   <CardHeader
                                         avatar={
                                           
-                                            el.type === "bieg" ? 
+                                            el.type === "Bieg" ? 
                                             (
                                             <Avatar sx={{ bgcolor: teal[500] }} aria-label="recipe">
                                             B

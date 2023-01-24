@@ -7,10 +7,14 @@ const Textswitch = styled('div')(({theme}) => ({
         color: '#999'
     }, 
     [theme.breakpoints.up('sm')] : {
+        margin: '0em 0.2em',
+     
         fontSize: '1.2rem'
         
     }, 
     [theme.breakpoints.up('md')] : {
+        margin: '0em 0.4em'
+
        
     }, 
     [theme.breakpoints.up('lg')] : {

@@ -75,6 +75,20 @@ export default function Resultcharts() {
       setValue(index);
     };
   
+    
+    const data2021 = {
+      labels: ['Mistrzostwa Polski w duathlonie', 'Garmin Iron Triathlon 1/2', 'Serock Triathlon', 'Triathlon Lwa','Garmin Iron Triathlon 1/8', 'Triathlon Radłów', ], 
+      datasets: [
+            {
+                data: [3, 1, 1, 1, 1, 2], 
+                borderColor: '#7c5fe9', 
+                tension: 0.5, 
+            
+            }
+        ]
+    }
+
+
 
     const data2022 = {
         labels: ['HP Indoor Triathlon', 'Duathlon Czempiń', 'Mistrzostwa Europy Olsztyn', 'Susz Triathlon', 'Enea Bydgoszcz Triathlon', 'Sprint Triathlon Gdynia', 'Dziesiątka Babicka', '5150 Poznań', 'Mararton Warszawski - kat M20'], 
@@ -144,7 +158,9 @@ export default function Resultcharts() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction} style={style.panel}>
-
+                <div className="data">
+                    <Line data={data2021} style={style.data} options={options}></Line>
+                </div>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
                 <div className="data">

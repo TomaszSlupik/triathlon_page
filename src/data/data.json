@@ -3,7 +3,7 @@
         "id": 0, 
         "nav": "/maraton",
         "name": "Maraton Warszawski", 
-        "type": "bieg",
+        "type": "Bieg",
         "data": "września 25, 2022",
         "image": "/img/img_2022/maraton.JPG",
         "marks" : 5
@@ -21,7 +21,7 @@
         "id": 2, 
         "nav": "/babicka",
         "name": "Dziesiątka babicka",
-        "type": "bieg",
+        "type": "Bieg",
         "data": "sierpnia 27, 2022",
         "image": "/img/img_2022/babicka.JPG",
         "marks" : 4.5
