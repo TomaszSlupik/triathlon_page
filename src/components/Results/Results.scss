@@ -1,3 +1,7 @@
+$body: #7c5fe9;
+$text: #999;
+$nav: #fff;
+
 .height {
     position: relative;
     width: 100vw;
@@ -8,4 +12,60 @@
     position: relative;
     width: 100vw;
     height: 100%;
+    &__header {
+        position: relative;
+        width: 100vw;
+        font-family: 'Black Ops One', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-nav {
+            position: relative;
+            width: 100%;
+            color: $body;
+            margin-left: 0.2em;
+            font-size: 1.6rem;
+            &--res {
+                color: $text;
+                text-transform: uppercase;
+            }
+            &--text {
+                font-size: 1.2rem;
+            }
+        }
+        &-img {
+            width: 100%;
+            height: 200px;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .results {
+        &__header {
+            flex-direction: row;
+            &-nav {
+                width: 50%;
+                font-size: 2.5rem;
+            }
+            &-img {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    .results {
+        &__header {
+
+            &-nav {
+                
+                font-size: 3.5rem;
+            }
+        }
+    }
 }

@@ -77,7 +77,7 @@ export default function Resultcharts() {
   
     
     const data2021 = {
-      labels: ['Mistrzostwa Polski w duathlonie', 'Garmin Iron Triathlon 1/2', 'Serock Triathlon', 'Triathlon Lwa','Garmin Iron Triathlon 1/8', 'Triathlon Radłów', ], 
+      labels: ['MP w duathlonie', 'Garmin Iron Triathlon 1/2', 'Serock Triathlon', 'Triathlon Lwa','Garmin Iron Triathlon 1/8', 'Triathlon Radłów', ], 
       datasets: [
             {
                 data: [3, 1, 1, 1, 1, 2], 

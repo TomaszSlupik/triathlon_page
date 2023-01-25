@@ -17,6 +17,8 @@ import Aboutme from '../Aboutme/Aboutme';
 import TextDescribe from '../../style/mymuistyle/textdescribe'
 import theme from '../../style/mybreakpoints'
 import { ThemeProvider } from '@mui/material';
+import Headercarousel from '../Headercarousel/Headercarousel';
+
 
 
 
@@ -69,11 +71,13 @@ useEffect(()=> {
                 <Header />
                 <HeaderImage />
                 <Aboutme />
+                <Headercarousel />
                 <div className="main__welcome">
                     <img className="main__welcome-svgSquare" src={process.env.PUBLIC_URL + '/svg/square.svg'} alt=""/>
                     <img className="main__welcome-svgSquareWhite" src={process.env.PUBLIC_URL + '/svg/square_white.svg'} alt="" />
                     <div className="main__welcome-img"></div>
                     <div className="main__welcome-text">
+                      
                     <ThemeProvider theme={theme}>
                       <TextDescribe>
                         Na codzień pracuje jako Programista. Sport trenuje amatorsko i traktuje to jako moje hobby. Pokazuje jak można łączyć pasję z codziennymi obowiązkami. Zapraszam do śledzenia mojej przygody.     
