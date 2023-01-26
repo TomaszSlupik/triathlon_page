@@ -23,6 +23,10 @@ const imageCarousel = [
     nav: '/img/headertwo.JPG', 
     alt: 'Kolarstwo - Wyścig sprint w Gdyni'
   }, 
+  {
+    nav: '/img/headerthree.JPG', 
+    alt: 'Wygrana - championman'
+  }, 
 ]
 
   return (

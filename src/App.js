@@ -9,6 +9,7 @@ import "swiper/css/bundle";
 import Results from './components/Results/Results';
 import Thankyou from './pages/Thankyou';
 import Maraton from './components/Trips/Describetrips/Maraton/Maraton';
+import Championman2022 from './components/Trips/Describetrips/Championman2022/Championman2022';
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/trips' element={<Trips />} />
           <Route path='/thankyou' element={<Thankyou />} />
           <Route path='/maraton' element={<Maraton />} />
+          <Route path='/championman2022' element={<Championman2022 />} />
         </Routes>
         <Footer />
       </Router>

@@ -22,12 +22,12 @@ $text: #999;
     }
     &__box {
         position: relative;
-        width: 50%;
+        width: 50% !important;
  
         &-slide {
             background-position: center;
             background-size: cover;
-            width: 300px;
+            width: 100%;
             height: 300px;
         }
     }

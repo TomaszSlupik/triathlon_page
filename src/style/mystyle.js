@@ -1,5 +1,4 @@
 
-import { createTheme } from '@mui/system'
 import styled from 'styled-components'
 
 const Mybutton = styled.button`
@@ -10,7 +9,6 @@ border-radius: 8px;
 cursor: pointer;
 border: none;
 text-transform: uppercase;
-
 `
 
 export default Mybutton
