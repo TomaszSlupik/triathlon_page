@@ -59,14 +59,22 @@ ${Myswitch} ${Styledskeleton} {
 export default function Switchtriathlon(props) {
 
     const [isChecked, setIsChecked] = useState(false)
+  
 
     const handleChange = (e) => {
-        console.log(isChecked)
         setIsChecked(e.target.checked)
-        
           props.triathlonFilter('Triathlon')
-         
+          if (isChecked === false) {
+          props.validTri.push('Triathlon')
+          }
+          else {
+            props.validTri.pop()
+            
+          }
     }
+
+
+
 
   return (
     <div>
@@ -80,7 +88,6 @@ export default function Switchtriathlon(props) {
                 <Styledskeleton isChecked={isChecked}/>
             </Myswitch>
     </Mylabel>
-
     </div>
   )
 }

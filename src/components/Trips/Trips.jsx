@@ -15,10 +15,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import Textswitch from '../../style/mymuistyle/textswitch';
-import Switchtriathlon from '../../style/mymuistyle/myswitch';
-import Switchduathlon from '../../style/mymuistyle/myswitchtwo';
-import Switchrun from '../../style/mymuistyle/myswitchthree';
+import Textswitch from '../../style/mymuistyle/textradio';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import Textradio from '../../style/mymuistyle/textradio';
+
+
 
 export default function Trips() {
 
@@ -26,7 +31,9 @@ const [trip, setTrip] = useState(Data)
  
 const style = {
   grid: {alignItems: 'center',   display: 'flex', justifyContent: 'center'}, 
-  card: {height: '300px'}
+  card: {height: '300px'}, 
+  label: {color: '#fff'}, 
+  radioGroup: {color: '#7c5fe9'}
 }
 
 let navigate = useNavigate()
@@ -42,47 +49,14 @@ const [run, setRun] = useState(false)
 
 
 
-const triathlonFilter = () => {
-
-  setTriathlon(true)
-  if (triathlon === false) {
-    filterTrips('Triathlon')
-  }
-  else (
-    filterTripsYes('Triathlon')
-  )
-}
-
-const duathlonFilter  = () => {
-  setDuathlon(true)
-  if (duathlon === false) {
-    filterTrips('Duathlon')
-  }
-  else (
-    filterTripsYes('Duathlon')
-  )
-}
-
-const runFilter = () => {
-  setRun(true)
-  if (run === false) {
-    filterTrips('Bieg')
-  }
-  else (
-    filterTripsYes('Bieg')
-  )
-}
-
 const filterTrips = (type) => {
-      const tripCopy = [...trip]
+      setTrip(Data)  
+      const tripCopy = Data
       const updateTrips = tripCopy.filter((el) => {
         return el.type === type
       })
+      
       setTrip(updateTrips)  
-     
-      setTriathlon(true)
-      setDuathlon(true)
-      setRun(true)
 }
 
 
@@ -91,37 +65,48 @@ const filterTripsYes = () => {
   setTriathlon(false)
   setDuathlon(false)
   setRun(false)
+ 
 }
-
 
   return (
     <div>
       <div className="trip">
+        <div className="trip__headerImage">
+          <div className="trip__headerImage-text">
+            Wyjazdy Triathlonowe, Duathlonowe i biegowe.
+            <div className="trip__headerImage-describe">
+          Zapraszam do moich artykułów i galerii z wyjazdów
+          </div>
+          </div>
+          
+          <img className="trip__headerImage" src={process.env.PUBLIC_URL + '/img/bikes.jpg'} alt="rowery - trip" />
+        </div>
         <div className="trip__switch">
-        <ThemeProvider theme={theme}>
-        <Switchtriathlon triathlonFilter={() => triathlonFilter()}
-            filterTrips={() => filterTrips()}
-            filterTripsYes={()=> filterTripsYes()}
-            />
-        <Textswitch
-        > Triathlon</Textswitch >
 
-        <Switchduathlon duathlonFilter={() => duathlonFilter()}
-            filterTrips={() => filterTrips()}
-            filterTripsYes={()=> filterTripsYes()}
-            disabled
-            />
-        <Textswitch
-        > Duathlon</Textswitch >
-
-        <Switchrun runFilter={() => runFilter()}
-            filterTrips={() => filterTrips()}
-            filterTripsYes={()=> filterTripsYes()}
-            />
-        <Textswitch
-        >Bieganie</Textswitch >
-
-      </ThemeProvider>
+       
+            <FormControl>
+            <FormLabel style={style.label} id="demo-row-radio-buttons-group-label">Wybierz dyscyplinę</FormLabel>
+            <RadioGroup
+              style={style.radioGroup}
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+            >
+              <FormControlLabel 
+              onClick={() => filterTrips("Triathlon")}
+              value="Triathlon" control={<Radio />} label={<Textradio>Triathlon</Textradio>} />
+              <FormControlLabel 
+              onClick={() => filterTrips("Duathlon")}
+              value="Duathlon" control={<Radio />} label="Duathlon" />
+              <FormControlLabel 
+              onClick={() => filterTrips("Bieg")}
+              value="Bieganie" control={<Radio />} label="Bieganie" />
+              <FormControlLabel 
+              onClick={filterTripsYes}
+              value="Wszystko" control={<Radio />} label="Wszystko" />
+            </RadioGroup>
+          </FormControl>
+    
         </div>
         <div className="trip__box">
                   <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>

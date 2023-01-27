@@ -1,15 +1,14 @@
 import {styled} from '@mui/system';
 
 
-const Textswitch = styled('div')(({theme}) => ({
+const Textradio = styled('div')(({theme}) => ({
     [theme.breakpoints.up('xs')] : {
-        fontSize: '0.8rem',
+        fontSize: '1rem',
         color: '#999'
     }, 
     [theme.breakpoints.up('sm')] : {
         margin: '0em 0.2em',
-     
-        fontSize: '1.2rem'
+        fontSize: '1.3rem'
         
     }, 
     [theme.breakpoints.up('md')] : {
@@ -28,4 +27,4 @@ const Textswitch = styled('div')(({theme}) => ({
 
 }))
 
-export default Textswitch
+export default Textradio
