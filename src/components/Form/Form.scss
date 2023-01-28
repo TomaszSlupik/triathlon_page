@@ -1,4 +1,6 @@
 $text: #999;
+$body: #7c5fe9;
+$nav: #fff;
 
 .contactbox {
     position: relative;
@@ -13,12 +15,41 @@ $text: #999;
     &__form {
         position: relative;
         width: 90%;
-        height: 330px;
+        min-height: 400px;
         display: flex;
         flex-direction: column;
         border: 1px solid black;
-        border-radius: 8px;
+        border-radius: 63px 0px 63px 0px;
         overflow: hidden;
+        margin-bottom: 2em;
+        &-item {
+            position: relative;
+            width: 100%;
+            min-height: 180px;
+            background-color: $body;
+            font-size: 1.2rem;
+            
+            &--header{
+                text-transform: uppercase;
+                color: $nav;
+                text-align: center;
+                margin-top: 1em;
+                font-weight: bold;
+                font-size: 1.6rem;
+            }
+            &--describe {
+                text-align: justify;
+                padding: 0.4em 0.4em;
+                font-size: 1.2rem;
+            }
+            &--icon {
+                display: flex;
+                flex-direction: row;
+                cursor: pointer;
+                padding: 0em 0.2em;
+                font-weight: 700;
+            }
+        }
         &-box {
             position: relative;
             width: 100%;
@@ -41,4 +72,76 @@ label {
 
 input {
     color: $text; 
+}
+
+.iconEmail {
+    margin: 0em 0.4em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+ 
+}
+
+
+@media only screen and (min-width: 576px) {
+    .contactbox {
+     
+        &__form {
+       
+            &-item {
+                &--header{
+                    font-size: 2rem;
+                }}}
+}}
+
+@media only screen and (min-width: 768px) {
+    .contactbox {
+        &__form {
+            flex-direction: row;
+            &-item {
+                width: 40%;
+                height: 400px;
+            &--header {
+                font-size: 1.4rem;
+            }
+            }
+            &-box {
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .contactbox {
+     
+        &__form {
+       
+            &-item {
+                &--header{
+                    font-size: 1.6rem;
+                }}}
+}}
+
+@media only screen and (min-width: 992px) {
+    .contactbox {
+     
+        &__form {
+       
+            &-item {
+                &--header{
+                    font-size: 2rem;
+                }
+               &--describe {
+                font-size: 1.4rem;
+               } 
+            
+            }}
+}
+.label {
+    font-size: 1.4rem;
+}
+
 }

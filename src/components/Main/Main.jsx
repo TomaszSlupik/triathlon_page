@@ -75,7 +75,11 @@ useEffect(()=> {
                 <div className="main__welcome">
                     <img className="main__welcome-svgSquare" src={process.env.PUBLIC_URL + '/svg/square.svg'} alt=""/>
                     <img className="main__welcome-svgSquareWhite" src={process.env.PUBLIC_URL + '/svg/square_white.svg'} alt="" />
-                    <div className="main__welcome-img"></div>
+                    <div className="main__welcome-img">
+                      <div className="main__welcome-img--signature">
+                        Foto. startlist.pl
+                      </div>
+                    </div>
                     <div className="main__welcome-text">
                       
                     <ThemeProvider theme={theme}>

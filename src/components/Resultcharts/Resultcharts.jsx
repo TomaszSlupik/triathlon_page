@@ -82,7 +82,7 @@ export default function Resultcharts() {
             {
                 data: [3, 1, 1, 1, 1, 2], 
                 borderColor: '#7c5fe9', 
-                tension: 0.5, 
+                tension: 1, 
             
             }
         ]
@@ -96,29 +96,28 @@ export default function Resultcharts() {
             {
                 data: [1, 1, 4, 3, 1, 3, 1, 1, 3], 
                 borderColor: '#7c5fe9', 
-                tension: 0.5, 
+                tension: 1, 
             
             }
         ]
     }
 
-        const data2023 = {
-        labels: ['HP Indoor Triathlon',], 
-        datasets: [
-            {
-                data: [1,], 
-                borderColor: '#7c5fe9', 
-                tension: 0.5, 
+    //     const data2023 = {
+    //     labels: ['HP Indoor Triathlon',], 
+    //     datasets: [
+    //         {
+    //             data: [1], 
+    //             borderColor: '#7c5fe9', 
+    //             tension: 1, 
             
-            }
-        ]
-    }
+    //         }
+    //     ]
+    // }
 
     const options = {
         plugins: {
             legend: {
                 labels: {
-   
                     font: {
                         size: 14
                     }
@@ -127,9 +126,25 @@ export default function Resultcharts() {
         },
         scales : {
             x: {
+              scaleLabel: {
+                display: true,
+                labelString: 'Miejsce zawodów',
                 grid: {
-                    display: false
-                }
+                  display: false
+              }
+              },
+            }, 
+
+            y: {
+              ticks: {
+                stepSize: 1
+              },
+              scaleLabel: {
+                display: true,
+                labelString: 'Miejsce',
+                position: 'top'
+            }
+
             }
         }
     }
@@ -169,7 +184,7 @@ export default function Resultcharts() {
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
                 <div className="data">
-                    <Line data={data2023} style={style.data} options={options}></Line>
+                    {/* <Line data={data2023} style={style.data} options={options}></Line> */}
                 </div>
         </TabPanel>
       </Button>

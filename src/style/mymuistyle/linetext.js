@@ -5,7 +5,6 @@ const Linetext = styled('div')(({
     theme
 }) => ({
     [theme.breakpoints.up('xs')]: {
-        fontFamily: `'Black Ops One', sans-serif`,
         textAlign: 'center',
         color: '#7c5fe9',
         fontSize: '2rem',

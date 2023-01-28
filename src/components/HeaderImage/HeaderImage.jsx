@@ -4,6 +4,7 @@ import 'animate.css';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 
+
 export default function HeaderImage() {
 
   const scrolltoMe = () => {
@@ -19,7 +20,10 @@ export default function HeaderImage() {
   return (
     <div>
         <div className="headerimage">
-            <div className="headerimage__box">     
+            <div className="headerimage__box"> 
+                  <div className="headerimage__box-signature">
+                    Foto. startlist.pl
+                  </div>
                   <h2 className='headerimage__box-text animate__animated animate__fadeInRightBig'>Slupik <br/> Triathlon<br/> 
                   <KeyboardDoubleArrowDownIcon  onClick={scrolltoMe} style={style.arrow}/>
                   </h2>

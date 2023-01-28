@@ -16,6 +16,7 @@ export default function Carousel() {
             
           <Swiper
      effect={"flip"}
+    
      grabCursor={true}
      pagination={true}
      navigation={true}
@@ -26,9 +27,15 @@ export default function Carousel() {
         <div className="carousel__box-slide">
             <SwiperSlide>
               <img className='carousel__box-slide' src={process.env.PUBLIC_URL + '/img/carouselone.jpeg'} alt="zawody indoor triathlon - pływanie"/>
+              <div className="carousel__box-signature">
+              Foto. IRONMAN Poland
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <img className='carousel__box-slide' src={process.env.PUBLIC_URL + '/img/carouseltwo.JPG'} alt="susz triathlon"/>
+              <div className="carousel__box-signature">
+              Foto. Susz Triathlon
+              </div>
             </SwiperSlide>
         </div>
         </Swiper>

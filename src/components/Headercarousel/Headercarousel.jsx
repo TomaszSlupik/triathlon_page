@@ -9,6 +9,7 @@ import SwiperCore, {
   Navigation
 } from "swiper/core";
 
+
 SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 
@@ -17,15 +18,18 @@ export default function Headercarousel() {
 const imageCarousel = [
   {
     nav: '/img/headerone.JPG',
-    alt: 'Bieg - Mistrzostwa Europy'
+    alt: 'Bieg - Mistrzostwa Europy',
+    signature: 'Foto. startlist.pl'
   }, 
   {
     nav: '/img/headertwo.JPG', 
-    alt: 'Kolarstwo - Wyścig sprint w Gdyni'
+    alt: 'Kolarstwo - Wyścig sprint w Gdyni',
+    signature: 'Foto. IRONMAN Poland'
   }, 
   {
     nav: '/img/headerthree.JPG', 
-    alt: 'Wygrana - championman'
+    alt: 'Wygrana - championman',
+    signature: 'Foto. maratomania.pl'
   }, 
 ]
 
@@ -58,7 +62,10 @@ const imageCarousel = [
                   return  (
                     <div>
                     <SwiperSlide className='swiper__box-wraper'>
-                        <img className='swiper__box-wraper--img' src={process.env.PUBLIC_URL + el.nav} />
+                        <img className='swiper__box-wraper--img' src={process.env.PUBLIC_URL + el.nav} alt={el.alt} />
+                        <div className="swiper__box-wraper--signature">
+                          {el.signature}
+                        </div>
                     </SwiperSlide>
                   </div>
                   

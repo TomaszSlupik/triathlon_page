@@ -46,12 +46,20 @@ $nav: #fff;
             animation: rotate-left 55s infinite linear;
         }
         &-img {
+            position: relative;
             width: 50%;
             height: 100%;
             background-image: url("../../../public/img/welcome.jpeg");
             background-size: cover;
             background-position: center;
             z-index: 10;
+            &--signature {
+                position: absolute;
+                bottom: 2%;
+                right: 4%;
+                font-size: 0.9rem;
+                color: #fff;
+            }
             
         }
         &-text {

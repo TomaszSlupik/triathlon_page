@@ -9,7 +9,6 @@ $text: #999;
     &__time {
         color: $nav;
         font-size: 1.2rem;
-        font-family: 'Roboto', sans-serif;
         text-align: center;
         font-weight: bold;
         margin: 0.2em 0em;
@@ -20,7 +19,6 @@ $text: #999;
         font-size: 1.3rem;
         font-weight: bold;
         margin: 0.2em 0em;
-        font-family: 'Roboto', sans-serif;
     }
     &__timenumber {
         display: flex;
@@ -30,7 +28,6 @@ $text: #999;
         color: $text;
         font-size: 1.3rem;
         font-weight: bold;
-        font-family: 'Roboto', sans-serif;
         &-col {
             text-align: center;
         }

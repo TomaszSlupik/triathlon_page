@@ -14,11 +14,18 @@
         background-image: url('../../../public/img/header_me.jpg');
         display: flex;
         flex-direction: column;
+        &-signature{
+            position: absolute;
+            font-size: 0.9rem;
+            color: #fff;
+            right: 3%;
+            bottom: 4%;
+        }
+
         &-text {
             position: absolute;
             top: 48%;
             left: 62%;
-            font-family: 'Black Ops One', sans-serif;
             font-size: 2rem;
             text-shadow: 2px 2px 3px rgba(15, 15, 15, 0.54);   
         }
@@ -31,6 +38,10 @@
     .headerimage {
         &__box {
             height: 565px;
+            &-signature {
+                bottom: 5%;
+            }
+
             &-text {
                 top: 29%;
                 left: 67%;

@@ -15,12 +15,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import Textswitch from '../../style/mymuistyle/textradio';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
 import Textradio from '../../style/mymuistyle/textradio';
 
 
@@ -55,7 +53,9 @@ const filterTrips = (type) => {
       const updateTrips = tripCopy.filter((el) => {
         return el.type === type
       })
-      
+      console.log(triathlon)
+      console.log(duathlon)
+      console.log(run)
       setTrip(updateTrips)  
 }
 
@@ -82,10 +82,8 @@ const filterTripsYes = () => {
           <img className="trip__headerImage" src={process.env.PUBLIC_URL + '/img/bikes.jpg'} alt="rowery - trip" />
         </div>
         <div className="trip__switch">
-
-       
+        
             <FormControl>
-            <FormLabel style={style.label} id="demo-row-radio-buttons-group-label">Wybierz dyscyplinę</FormLabel>
             <RadioGroup
               style={style.radioGroup}
               row
@@ -97,13 +95,13 @@ const filterTripsYes = () => {
               value="Triathlon" control={<Radio />} label={<Textradio>Triathlon</Textradio>} />
               <FormControlLabel 
               onClick={() => filterTrips("Duathlon")}
-              value="Duathlon" control={<Radio />} label="Duathlon" />
+              value="Duathlon" control={<Radio />} label={<Textradio>Duathlon</Textradio>} />
               <FormControlLabel 
               onClick={() => filterTrips("Bieg")}
-              value="Bieganie" control={<Radio />} label="Bieganie" />
+              value="Bieganie" control={<Radio />} label={<Textradio>Bieganie</Textradio>} />
               <FormControlLabel 
               onClick={filterTripsYes}
-              value="Wszystko" control={<Radio />} label="Wszystko" />
+              value="Wszystko" control={<Radio />} label={<Textradio>Wszystko</Textradio>} />
             </RadioGroup>
           </FormControl>
     

@@ -10,6 +10,7 @@
         margin-top: 2em;
         width: 100%;
         height: 315px;
+        margin-bottom: 2em;
         
     }
 }
@@ -17,7 +18,7 @@
 .data {
     position: relative;
     height: 100%;
-    width: 380px;
+    width: 360px;
     margin-left: -2em
 }
 
@@ -31,7 +32,7 @@
         }
     }
     .data {
-        width: 500px;
+        width: 450px;
 
     }
 }
@@ -48,7 +49,23 @@
         }
     }
     .data {
+        width: 755px;
+
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .data {
         width: 900px;
+
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .data {
+        width: 1000px;
 
     }
 }

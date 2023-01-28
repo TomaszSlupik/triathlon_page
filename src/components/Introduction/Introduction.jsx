@@ -3,6 +3,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import './Introduction.scss'
 
+
 export default function Introduction()   {
 
     const [level, setLevel] = useState(0) 
@@ -23,9 +24,10 @@ export default function Introduction()   {
 
   return  (
     <div className='introduction'>
-        
       <div className="introduction__img kenburns-top">
-        <div className="introduction__img-shadow"></div>
+        <div className="introduction__img-shadow">
+
+        </div>
       <CircularProgress
         style={style.circle}
         variant='determinate' color="secondary" value={level}/>

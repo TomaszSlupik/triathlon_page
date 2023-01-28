@@ -5,7 +5,6 @@ const Centerheader = styled('div')(({
     theme
 }) => ({
     [theme.breakpoints.up('xs')]: {
-        fontFamily: `'Black Ops One', sans-serif`,
         display: 'flex',
         justifyContent: 'center',
         textAlign: 'center',

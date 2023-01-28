@@ -16,7 +16,6 @@ $nav: #fff;
     &__header {
         position: relative;
         width: 100vw;
-        font-family: 'Black Ops One', sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -24,8 +23,10 @@ $nav: #fff;
             position: relative;
             width: 100%;
             color: $body;
-            margin-left: 0.2em;
             font-size: 1.6rem;
+            font-weight: 500;    
+            margin: 1em 0.4em;
+            padding: 0.2em 0.4em;
             &--res {
                 color: $text;
                 text-transform: uppercase;
@@ -36,7 +37,7 @@ $nav: #fff;
         }
         &-img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             background-size: contain;
             background-position: center;
         }
@@ -66,6 +67,18 @@ $nav: #fff;
             &-nav {
                 
                 font-size: 3.5rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .results {
+        &__header {
+
+            &-img {
+                height: 300px;
             }
         }
     }

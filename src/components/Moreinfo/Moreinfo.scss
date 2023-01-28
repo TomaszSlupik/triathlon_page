@@ -19,7 +19,6 @@ $text: #999;
 
     &__text {
         margin-left: 1em;
-        font-family: 'Black Ops One', sans-serif;
         font-size: 1.6rem;
         text-shadow: 2px 2px 3px rgba(255, 253, 253, 0.945);  
         color: $body;
@@ -48,12 +47,11 @@ $text: #999;
                 transform: translate(-50%, -50%);
                 text-align: center;
                 &---text {
-                    font-family: 'Black Ops One', sans-serif;
+                    font-family: 'Roboto', sans-serif;
                     
                 }
                 &---textunder {
                     font-weight: bold;
-                    font-family: 'Black Ops One', sans-serif;
                     font-size: 2rem;
                 }
             }

@@ -5,7 +5,6 @@ const Leftheader = styled('div')(({
     theme
 }) => ({
     [theme.breakpoints.up('xs')]: {
-        fontFamily: `'Black Ops One', sans-serif`,
         display: 'flex',
         alignItems: 'flex-start',
         textAlign: 'left',
