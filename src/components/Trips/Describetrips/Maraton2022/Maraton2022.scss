@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 70px;
+    
     &__box {
         position: relative;
         width: 80%;
@@ -31,7 +32,7 @@
           
             &--signature {
                 position: absolute;
-                right: 1%;
+                right: 14%;
                 bottom: 1%;
                 font-size: 0.9rem;
                 color: #fff;
@@ -41,10 +42,7 @@
     }
 }
 
-.four {
-    margin-left: 0em;
-    margin-top: 1em;
-}
+
 
 @media only screen and (min-width: 576px) {
     .maraton {
@@ -62,8 +60,7 @@
     .four {
         margin-top: 0em;
         margin-left: 1em;
-    }
-    
+    }   
 }
 
 @media only screen and (min-width: 1400px) {

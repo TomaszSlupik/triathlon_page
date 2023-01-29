@@ -14,6 +14,8 @@ import Halfbox from '../../../../style/mymuistyle/halfbox';
 import TextDescribebox from '../../../../style/mymuistyle/textdescribebox';
 import Centerheader from '../../../../style/mymuistyle/centerheader';
 import { DataGrid } from '@mui/x-data-grid';
+import BacktoPage from '../BacktoPage';
+
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 20 },
@@ -46,10 +48,11 @@ export default function Maraton2022() {
         Aos.init({duration: 3000})
       }, [])
     
-
-
   return (
-    <div className='maraton'>
+    <div>
+        <BacktoPage />
+        <div className='maraton'>
+        
         <ThemeProvider theme={theme}>
         <Linetext>Maraton Warszawski</Linetext>
         <Line />
@@ -129,5 +132,7 @@ export default function Maraton2022() {
         
         </ThemeProvider>
     </div>
+    </div>
+   
   )
 }

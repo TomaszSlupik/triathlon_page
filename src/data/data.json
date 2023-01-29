@@ -12,7 +12,7 @@
     }, 
     {
         "id": 1,
-        "nav": "/5150", 
+        "nav": "/poznan2022", 
         "name": "5150",
         "type": "Triathlon",
         "data": "września 4, 2022",
@@ -23,7 +23,7 @@
     }, 
     {
         "id": 2, 
-        "nav": "/babicka",
+        "nav": "/babicka2022",
         "name": "Dziesiątka babicka",
         "type": "Bieg",
         "data": "sierpnia 27, 2022",
@@ -35,7 +35,7 @@
     }, 
     {
         "id": 3, 
-        "nav": "/sprintgdynia",
+        "nav": "/gdynia2022",
         "name": "Sprint Gdynia",
         "type": "Triathlon",
         "data": "sierpnia 6, 2022",
@@ -46,7 +46,7 @@
     },
     {
         "id": 4, 
-        "nav": "/eneabydgoszcz",
+        "nav": "/bydgoszcz2022",
         "name" : "Enea Bydgoszcz ",
         "type": "Triathlon",
         "data": "lipca 10, 2022",
@@ -57,7 +57,7 @@
     },
     {
         "id": 5, 
-        "nav": "/europechampionships",
+        "nav": "/olsztyn2022",
         "name" : "Mistrzostwa Europy AG",
         "type": "Triathlon",
         "data": "maja 29, 2022",

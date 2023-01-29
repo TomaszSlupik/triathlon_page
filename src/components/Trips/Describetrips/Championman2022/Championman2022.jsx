@@ -15,6 +15,9 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import Halfbox from '../../../../style/mymuistyle/halfbox'
+import BacktoPage from '../BacktoPage'
+
+
 
 
 scrollBar ()
@@ -25,8 +28,12 @@ export default function Championman2022() {
         Aos.init({duration: 3000})
       }, [])
     
+   
+  
 
   return (
+    <div>
+    <BacktoPage />
     <div className='championman'>
         <ThemeProvider theme={theme}>
             <Linetext>ChampionMan Duathlon</Linetext>
@@ -82,5 +89,7 @@ export default function Championman2022() {
         </ThemeProvider>
       
     </div>
+    </div>
+    
   )
 }
