@@ -24,7 +24,13 @@
         height: 100%;
         background-color: rgba($color: #000000, $alpha: 0.75);
     }
-    
+    }
+    &__signature {
+        position: absolute;
+        right: 4%;
+        bottom: 4%;
+        font-size: 0.8rem;
+        color: #fff;
     }
     
 }

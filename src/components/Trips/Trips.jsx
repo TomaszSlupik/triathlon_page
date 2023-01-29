@@ -29,9 +29,10 @@ const [trip, setTrip] = useState(Data)
  
 const style = {
   grid: {alignItems: 'center',   display: 'flex', justifyContent: 'center'}, 
-  card: {height: '300px'}, 
+  card: {height: '345px'}, 
   label: {color: '#fff'}, 
-  radioGroup: {color: '#7c5fe9'}
+  radioGroup: {color: '#7c5fe9'}, 
+  trophy: {marginLeft: '0.2em', color: '#faaf00'}
 }
 
 let navigate = useNavigate()
@@ -152,8 +153,12 @@ const filterTripsYes = () => {
                                         image={el.image}
                                         alt={el.name + 'zdjęcie opisujące zawody'}
                                       />
+                                      <div className='signature'>{el.signature}</div>
                                        <Rating name="read-only" value={el.marks} precision={0.5} readOnly />
-                                 
+                                        <div className='trophy'>
+                                        {el.trophy}
+                                        <i style={style.trophy} class="fa-solid fa-trophy"></i>
+                                        </div>
                                   </Card>
                                 </Mycard>
                               </Grid>

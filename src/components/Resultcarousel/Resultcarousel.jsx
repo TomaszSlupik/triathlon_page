@@ -30,19 +30,23 @@ export default function Resultcarousel() {
       >
         <SwiperSlide>
             <img src={process.env.PUBLIC_URL + '/img/resultone.JPG'} alt="ME - bieg" className="resultcarousel__img"/>
+            <div className="resultcarousel__signature">Foto. startlist.pl</div>
         </SwiperSlide>
         <SwiperSlide>
-        <img src={process.env.PUBLIC_URL + '/img/resulttwo.JPG'} alt="ME - bieg" className="resultcarousel__img"/>
+        <img src={process.env.PUBLIC_URL + '/img/resulttwo.JPG'} alt="Pływanie - indoor Triathlon" className="resultcarousel__img"/>
+        <div className="resultcarousel__signature">Foto. Agnieszka Weremczuk</div>
         </SwiperSlide>
         <SwiperSlide>
         <img src={process.env.PUBLIC_URL + '/img/resultthree.JPG'} alt="Pływanie - HP" className="resultcarousel__img"/>
+        <div className="resultcarousel__signature">Foto. Agnieszka Weremczuk</div>
         </SwiperSlide>
         <SwiperSlide>
-        <img src={process.env.PUBLIC_URL + '/img/resultfive.JPG'} alt="Pływanie - HP" className="resultcarousel__img"/>
+        <img src={process.env.PUBLIC_URL + '/img/resultfive.JPG'} alt="Członek kadry narodowej" className="resultcarousel__img"/>
         </SwiperSlide>
       
         <SwiperSlide>
         <img src={process.env.PUBLIC_URL + '/img/resultfour.JPG'} alt="Pływanie - HP" className="resultcarousel__img"/>
+        <div className="resultcarousel__signature">Foto. LOTTO Duathlon Energy</div>
         </SwiperSlide>
       </Swiper>
     </div>

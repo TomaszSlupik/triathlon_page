@@ -8,8 +8,8 @@ import Trips from './components/Trips/Trips';
 import "swiper/css/bundle";
 import Results from './components/Results/Results';
 import Thankyou from './pages/Thankyou';
-import Maraton from './components/Trips/Describetrips/Maraton/Maraton';
 import Championman2022 from './components/Trips/Describetrips/Championman2022/Championman2022';
+import Maraton2022 from './components/Trips/Describetrips/Maraton2022/Maraton2022';
 
 
 
@@ -23,7 +23,7 @@ function App() {
           <Route path='/results' element={<Results />} />
           <Route path='/trips' element={<Trips />} />
           <Route path='/thankyou' element={<Thankyou />} />
-          <Route path='/maraton' element={<Maraton />} />
+          <Route path='/maraton2022' element={<Maraton2022 />} />
           <Route path='/championman2022' element={<Championman2022 />} />
         </Routes>
         <Footer />
