@@ -23,17 +23,17 @@ function App() {
       <Router>
           <Nav />   
         <Routes>
-          <Route path='/' element={<Main />} />
-          <Route path='/results' element={<Results />} />
-          <Route path='/trips' element={<Trips />} />
-          <Route path='/thankyou' element={<Thankyou />} />
-          <Route path='/maraton2022' element={<Maraton2022 />} />
-          <Route path='/championman2022' element={<Championman2022 />} />
-          <Route path='/poznan2022' element={<Poznan2022 />} />
-          <Route path='/babicka2022' element={<Babicka2022 />} />
-          <Route path='/gdynia2022' element={<Gdynia2022 />} />
-          <Route path='/bydgoszcz2022' element={<Bydgoszcz2022 />} />
-          <Route path='/olsztyn2022' element={<Olsztyn2022 />} />
+          <Route path='/triathlon_page' element={<Main />} />
+          <Route path='/triathlon_page/results' element={<Results />} />
+          <Route path='/triathlon_page/trips' element={<Trips />} />
+          <Route path='/triathlon_page/thankyou' element={<Thankyou />} />
+          <Route path='/triathlon_page/maraton2022' element={<Maraton2022 />} />
+          <Route path='/triathlon_page/championman2022' element={<Championman2022 />} />
+          <Route path='/triathlon_page/poznan2022' element={<Poznan2022 />} />
+          <Route path='/triathlon_page/babicka2022' element={<Babicka2022 />} />
+          <Route path='/triathlon_page/gdynia2022' element={<Gdynia2022 />} />
+          <Route path='/triathlon_page/bydgoszcz2022' element={<Bydgoszcz2022 />} />
+          <Route path='/triathlon_page/olsztyn2022' element={<Olsztyn2022 />} />
         </Routes>
         <Footer />
       </Router>

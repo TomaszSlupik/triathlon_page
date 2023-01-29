@@ -7,7 +7,7 @@ export default function BacktoPage() {
     let navigate = useNavigate()
 
     const backtoPage = () => {
-        navigate('/trips')
+        navigate('/triathlon_page/trips')
     }
 
   return (

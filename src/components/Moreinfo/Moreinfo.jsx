@@ -18,11 +18,11 @@ export default function Moreinfo() {
   let navigate= useNavigate()
   
   const goToResults = () => {
-    navigate('/results')
+    navigate('/triathlon_page/results')
   }
 
   const goToTrip = () =>  {
-    navigate('/trips')
+    navigate('/triathlon_page/trips')
   }
 
   return (

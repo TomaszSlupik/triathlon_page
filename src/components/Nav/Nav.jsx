@@ -21,15 +21,15 @@ export default function Nav() {
   const linkNav = [
     {
       nameLink:'Home',
-      hrefLink: '/'
+      hrefLink: '/triathlon_page'
     },
     {
       nameLink:'Wyniki',
-      hrefLink: '/results'
+      hrefLink: '/triathlon_page/results'
   },
     {
         nameLink:'Wyjazdy',
-        hrefLink: '/trips'
+        hrefLink: '/triathlon_page/trips'
     },
 
   ]
